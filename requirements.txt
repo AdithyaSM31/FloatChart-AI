@@ -4,9 +4,7 @@ sqlalchemy
 psycopg2-binary
 pandas
 groq
-langchain
-langchain-core
+langchain==0.1.0
+langchain-core==0.1.0
 langchain-groq
-chromadb
-sentence-transformers
 python-dotenv

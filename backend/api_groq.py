@@ -7,8 +7,8 @@ from dotenv import load_dotenv
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_groq import ChatGroq
 from fastapi.middleware.cors import CORSMiddleware
-import chromadb
-from sentence_transformers import SentenceTransformer
+# import chromadb  # Disabled for Railway deployment (too heavy)
+# from sentence_transformers import SentenceTransformer  # Disabled for Railway deployment (too heavy)
 import numpy as np
 import json
 import logging
@@ -23,15 +23,17 @@ GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 DB_PASSWORD = os.getenv("DB_PASSWORD", "YOUR_POSTGRES_PASSWORD")
 
 # --- INITIALIZE VECTOR DB AND EMBEDDING MODEL ON STARTUP ---
+# Disabled for Railway deployment to reduce build time and memory usage
 collection = None
 embedding_model = None
-try:
-    chroma_client = chromadb.PersistentClient(path="chroma_db")
-    collection = chroma_client.get_or_create_collection(name="argo_float_summaries")
-    embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
-    logger.info("✅ ChromaDB and sentence-transformer model loaded successfully.")
-except Exception as e:
-    logger.error(f"❌ ERROR: Could not load ChromaDB. Run populate_vectordb.py first. Error: {e}")
+# try:
+#     chroma_client = chromadb.PersistentClient(path="chroma_db")
+#     collection = chroma_client.get_or_create_collection(name="argo_float_summaries")
+#     embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
+#     logger.info("✅ ChromaDB and sentence-transformer model loaded successfully.")
+# except Exception as e:
+#     logger.error(f"❌ ERROR: Could not load ChromaDB. Run populate_vectordb.py first. Error: {e}")
+logger.info("⚠️ ChromaDB disabled for Railway deployment. App will work without vector search.")
 
 app = FastAPI(
     title="OceanGPT API (Groq Edition)",
