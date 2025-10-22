@@ -1308,6 +1308,7 @@ body::before {
   justify-content: center;
   transition: var(--transition-smooth);
   box-shadow: var(--shadow-floating);
+  cursor: pointer;
 }
 
 .mobile-menu-btn:hover {
@@ -1320,7 +1321,7 @@ body::before {
   display: none;
   position: fixed;
   top: 0;
-  left: 0;
+  left: -320px;
   width: 320px;
   height: 100vh;
   background: var(--glass-bg);
@@ -1330,6 +1331,11 @@ body::before {
   flex-direction: column;
   padding: 2rem;
   box-shadow: var(--shadow-floating);
+  transition: left 0.3s ease-in-out;
+}
+
+.nav-mobile.open {
+  left: 0;
 }
 
 .mobile-nav-header {
@@ -1437,6 +1443,14 @@ body::before {
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
   z-index: 999;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar-overlay.show {
+  display: block;
+  opacity: 1;
 }
 
 /* Animations */
@@ -1889,6 +1903,10 @@ body::before {
   }
   
   .mobile-menu-btn {
+    display: flex;
+  }
+  
+  .nav-mobile {
     display: flex;
   }
   

@@ -269,6 +269,8 @@
   /* Chat Container */
   .chat-container {
     gap: 0.75rem;
+    max-width: 100%;
+    width: 100%;
   }
   
   .chat-header {
@@ -292,6 +294,8 @@
   /* Messages */
   .messages-container {
     border-radius: 16px;
+    width: 100%;
+    max-width: 100%;
   }
   
   .messages-list {
@@ -299,8 +303,13 @@
     gap: 0.75rem;
   }
   
+  .message {
+    width: 100%;
+    max-width: 100%;
+  }
+  
   .message-content {
-    max-width: 80%;
+    max-width: 85%;
   }
   
   .message-avatar {
@@ -319,6 +328,16 @@
   }
   
   /* Welcome Screen */
+  .welcome-message {
+    padding: 1rem;
+    width: 100%;
+  }
+  
+  .welcome-content {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+  
   .welcome-content h3 {
     font-size: 1.5rem;
   }
@@ -327,17 +346,28 @@
     font-size: 1rem;
   }
   
+  .welcome-icon {
+    width: 80px;
+    height: 80px;
+  }
+  
   .example-queries {
     margin-top: 1.5rem;
+    width: 100%;
   }
   
   .example-queries h4 {
     font-size: 1rem;
   }
   
+  .example-list {
+    width: 100%;
+  }
+  
   .example-query {
     padding: 0.875rem 1.25rem;
     font-size: 0.9rem;
+    width: 100%;
   }
   
   /* Data Display */
@@ -382,10 +412,13 @@
   .input-container {
     padding: 1rem;
     border-radius: 16px;
+    width: 100%;
+    max-width: 100%;
   }
   
   .input-area {
     gap: 0.75rem;
+    width: 100%;
   }
   
   .input-actions {
@@ -396,6 +429,7 @@
     width: 42px;
     height: 42px;
     border-radius: 10px;
+    flex-shrink: 0;
   }
   
   .input-btn svg {
@@ -403,16 +437,24 @@
     height: 18px;
   }
   
+  .input-field {
+    flex: 1;
+    width: 100%;
+  }
+  
   .chat-input {
     padding: 0.875rem 1rem;
     font-size: 0.95rem;
     border-radius: 14px;
+    width: 100%;
+    max-width: 100%;
   }
   
   .send-btn {
     width: 42px;
     height: 42px;
     border-radius: 10px;
+    flex-shrink: 0;
   }
   
   .send-btn svg {

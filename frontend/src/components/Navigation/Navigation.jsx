@@ -43,6 +43,14 @@ const Navigation = ({ sidebarOpen, setSidebarOpen }) => {
         {sidebarOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
 
+      {/* Sidebar Overlay */}
+      {sidebarOpen && (
+        <div 
+          className="sidebar-overlay show"
+          onClick={() => setSidebarOpen(false)}
+        />
+      )}
+
       {/* Desktop Navigation */}
       <nav className="nav-desktop">
         <div className="nav-brand">
