@@ -2,14 +2,18 @@
 
 import pandas as pd
 from sqlalchemy import create_engine
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # --- DATABASE CONNECTION DETAILS ---
-# IMPORTANT: Replace with your own PostgreSQL credentials
-db_user = 'postgres'
-db_password = 'aadu3134' # The password you set during installation
-db_host = 'localhost'
-db_port = '5432'
-db_name = 'argo_db'
+# Uses environment variables for Railway deployment
+db_user = os.getenv('DB_USER', 'postgres')
+db_password = os.getenv('DB_PASSWORD', 'aadu3134')
+db_host = os.getenv('DB_HOST', 'localhost')
+db_port = os.getenv('DB_PORT', '5432')
+db_name = os.getenv('DB_NAME', 'argo_db')
 
 # --- The name of our data table ---
 table_name = 'argo_data'
@@ -34,7 +38,7 @@ print(f"Successfully loaded {len(df)} rows.")
 engine_string = f"postgresql+psycopg2://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}"
 engine = create_engine(engine_string)
 
-print(f"Connecting to database '{db_name}' and loading data into table '{table_name}'...")
+print(f"Connecting to database '{db_name}' at {db_host}:{db_port} and loading data into table '{table_name}'...")
 
 # Use df.to_sql to load the data
 # if_exists='replace': Deletes the old table and creates a new one. Good for re-running the script.
