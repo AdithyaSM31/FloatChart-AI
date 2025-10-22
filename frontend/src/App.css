@@ -1,0 +1,216 @@
+/* App-specific styles */
+.app {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Ocean particle effects */
+.ocean-particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.particle {
+  position: absolute;
+  background: var(--ocean-mist);
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: float 6s ease-in-out infinite;
+}
+
+.particle:nth-child(odd) {
+  animation-delay: -2s;
+  background: var(--ocean-crystal);
+}
+
+.particle:nth-child(3n) {
+  animation-delay: -4s;
+  background: var(--ocean-pearl);
+}
+
+/* Page transition animations */
+.page-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Loading states */
+.loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--ocean-mist);
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Glass morphism effects */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-strong {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Ocean-themed gradients */
+.gradient-ocean {
+  background: linear-gradient(135deg, var(--ocean-deep) 0%, var(--ocean-medium) 50%, var(--ocean-surface) 100%);
+}
+
+.gradient-surface {
+  background: linear-gradient(180deg, var(--ocean-surface) 0%, var(--ocean-foam) 100%);
+}
+
+.gradient-mist {
+  background: linear-gradient(45deg, var(--ocean-mist) 0%, var(--ocean-crystal) 100%);
+}
+
+/* Interactive elements */
+.interactive {
+  transition: var(--transition-smooth);
+  cursor: pointer;
+}
+
+.interactive:hover {
+  transform: translateY(-2px);
+}
+
+.interactive:active {
+  transform: translateY(0);
+}
+
+/* Text effects */
+.text-glow {
+  text-shadow: 0 0 10px rgba(0, 170, 255, 0.5);
+}
+
+.text-ocean {
+  background: linear-gradient(135deg, var(--ocean-crystal) 0%, var(--ocean-pearl) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Utility classes */
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.scale-in {
+  animation: scaleIn 0.5s ease-out;
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+/* Styling for a single row of data */
+.data-row {
+  background-color: rgba(0, 0, 0, 0.15); /* Darker background for each row */
+  border-radius: 8px;
+  padding: 16px;
+  display: flex; /* Arrange cells horizontally */
+  gap: 16px; /* Space between cells */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 8px; /* Space between rows */
+}
+
+/* Styling for a single key-value pair (e.g., 'latitude: 0.013') */
+.data-cell {
+  flex: 1; /* Allow cells to share space equally */
+  min-width: 0;
+}
+
+/* Styling for the label (e.g., 'latitude') */
+.data-key {
+  display: block; /* Puts the key on its own line above the value */
+  font-size: 0.75rem; /* 12px */
+  color: rgba(255, 255, 255, 0.6); /* Lighter, less prominent color */
+  text-transform: capitalize;
+  margin-bottom: 4px;
+}
+
+/* Styling for the value (e.g., '0.013') */
+.data-value {
+  display: block;
+  font-size: 1rem; /* 16px */
+  font-weight: 600;
+  color: #ffffff;
+  /* Prevent long values from breaking the layout */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Container for the 'Show More' button */
+.data-more {
+  text-align: center; /* Center the button */
+  margin-top: 12px;
+}
+
+/* Styling for the 'Show More' / 'Show Less' button */
+.data-more .btn.btn-link {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px; /* Pill shape */
+  padding: 8px 16px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Add a hover effect for interactivity */
+.data-more .btn.btn-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px); /* Slight lift on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
