@@ -44,12 +44,7 @@ app = FastAPI(
 # Allow CORS for front-end development
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "http://localhost:3000",
-        "https://floatchart-ai.vercel.app",  # Add your Vercel production URL
-        "https://*.vercel.app",  # Allow all Vercel preview deployments
-    ],
+    allow_origins=["*"],  # Allow all origins for now - restrict this in production
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -321,6 +316,19 @@ def ask_question(request: QueryRequest):
         raise HTTPException(status_code=500, detail=f"An internal error occurred: {str(e)}")
 
 # --- 7. HEALTH CHECK ENDPOINT ---
+@app.get("/")
+def root():
+    return {
+        "message": "FloatChart AI Backend API",
+        "version": "3.0.0",
+        "status": "online",
+        "endpoints": {
+            "health": "/health",
+            "ask": "/ask (POST)",
+            "docs": "/docs"
+        }
+    }
+
 @app.get("/health")
 def health_check():
     db_status = "OK"
