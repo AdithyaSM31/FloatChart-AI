@@ -1,0 +1,676 @@
+/* Mobile Optimization for FloatChart AI */
+
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 1024px) {
+  /* Chat Page Mobile */
+  .chat-page {
+    padding: 1rem;
+  }
+  
+  .chat-container {
+    height: calc(100vh - 2rem);
+    gap: 1rem;
+  }
+  
+  .chat-header {
+    padding: 1rem 1.5rem;
+  }
+  
+  .header-title h1 {
+    font-size: 1.5rem;
+  }
+  
+  .header-actions {
+    gap: 0.5rem;
+  }
+  
+  .header-actions button {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+  }
+  
+  .header-actions button span {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Navigation */
+  .language-switcher {
+    top: 1rem;
+    right: 1rem;
+  }
+  
+  .language-trigger {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .language-dropdown {
+    min-width: 250px;
+    right: -10px;
+  }
+  
+  /* Chat Container */
+  .chat-container {
+    gap: 0.75rem;
+  }
+  
+  .chat-header {
+    padding: 0.75rem 1rem;
+    border-radius: 16px;
+  }
+  
+  .header-title {
+    gap: 0.5rem;
+  }
+  
+  .header-title h1 {
+    font-size: 1.25rem;
+  }
+  
+  .header-title svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Messages */
+  .messages-container {
+    border-radius: 16px;
+  }
+  
+  .messages-list {
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+  
+  .message-content {
+    max-width: 80%;
+  }
+  
+  .message-avatar {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .message-text {
+    padding: 0.875rem 1rem;
+    font-size: 0.95rem;
+    border-radius: 14px;
+  }
+  
+  .message-time {
+    font-size: 0.75rem;
+  }
+  
+  /* Welcome Screen */
+  .welcome-content h3 {
+    font-size: 1.5rem;
+  }
+  
+  .welcome-content p {
+    font-size: 1rem;
+  }
+  
+  .example-queries {
+    margin-top: 1.5rem;
+  }
+  
+  .example-queries h4 {
+    font-size: 1rem;
+  }
+  
+  .example-query {
+    padding: 0.875rem 1.25rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Data Display */
+  .message-data {
+    padding: 0.875rem;
+    border-radius: 10px;
+  }
+  
+  .data-header {
+    font-size: 0.9rem;
+  }
+  
+  .data-actions button {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .data-actions button svg {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .message-sql {
+    padding: 0.875rem;
+  }
+  
+  .sql-code {
+    font-size: 0.85rem;
+    padding: 0.875rem;
+  }
+  
+  /* Map */
+  .message-map {
+    padding: 0.75rem;
+  }
+  
+  .chat-map {
+    height: 250px !important;
+  }
+  
+  /* Input Area */
+  .input-container {
+    padding: 1rem;
+    border-radius: 16px;
+  }
+  
+  .input-area {
+    gap: 0.75rem;
+  }
+  
+  .input-actions {
+    gap: 0.5rem;
+  }
+  
+  .input-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+  }
+  
+  .input-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .chat-input {
+    padding: 0.875rem 1rem;
+    font-size: 0.95rem;
+    border-radius: 14px;
+  }
+  
+  .send-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+  }
+  
+  .send-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  /* Image Preview */
+  .image-preview img {
+    max-width: 150px;
+    max-height: 100px;
+  }
+  
+  /* Data Viz Page */
+  .dataviz-container {
+    gap: 1.5rem;
+  }
+  
+  .dataviz-header {
+    padding: 1.5rem;
+  }
+  
+  .filters-content {
+    padding: 1.5rem;
+  }
+  
+  .filters-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .tabs-header {
+    flex-wrap: wrap;
+  }
+  
+  .tab-button {
+    padding: 1rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .content-area {
+    padding: 1.5rem;
+  }
+  
+  .charts-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra Small Devices */
+  .chat-page {
+    padding: 0.5rem;
+  }
+  
+  .chat-container {
+    height: calc(100vh - 1rem);
+    gap: 0.5rem;
+  }
+  
+  .chat-header {
+    padding: 0.75rem;
+    border-radius: 12px;
+  }
+  
+  .header-title h1 {
+    font-size: 1.1rem;
+  }
+  
+  .header-title svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .header-actions button {
+    width: 36px;
+    height: 36px;
+  }
+  
+  /* Messages */
+  .messages-container {
+    border-radius: 12px;
+  }
+  
+  .messages-list {
+    padding: 0.75rem;
+    gap: 0.5rem;
+  }
+  
+  .message-content {
+    max-width: 85%;
+  }
+  
+  .message-avatar {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .message-avatar svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .message-text {
+    padding: 0.75rem 0.875rem;
+    font-size: 0.9rem;
+    border-radius: 12px;
+  }
+  
+  .message-time {
+    font-size: 0.7rem;
+  }
+  
+  /* Welcome */
+  .welcome-content h3 {
+    font-size: 1.25rem;
+  }
+  
+  .welcome-content p {
+    font-size: 0.9rem;
+  }
+  
+  .welcome-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .example-queries h4 {
+    font-size: 0.95rem;
+  }
+  
+  .example-query {
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+  }
+  
+  /* Data */
+  .message-data {
+    padding: 0.75rem;
+  }
+  
+  .data-header {
+    font-size: 0.85rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .data-actions {
+    align-self: flex-end;
+  }
+  
+  .message-sql {
+    padding: 0.75rem;
+  }
+  
+  .sql-header {
+    font-size: 0.85rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .sql-header button {
+    align-self: flex-end;
+  }
+  
+  .sql-code {
+    font-size: 0.75rem;
+    padding: 0.75rem;
+  }
+  
+  /* Map */
+  .chat-map {
+    height: 200px !important;
+  }
+  
+  .message-map {
+    padding: 0.5rem;
+  }
+  
+  .map-header {
+    font-size: 0.85rem;
+  }
+  
+  /* Input */
+  .input-container {
+    padding: 0.75rem;
+    border-radius: 12px;
+  }
+  
+  .input-area {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .input-actions {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .input-field {
+    order: 1;
+    width: 100%;
+  }
+  
+  .input-btn {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .chat-input {
+    padding: 0.75rem 0.875rem;
+    font-size: 0.9rem;
+    min-height: 42px;
+  }
+  
+  .send-btn {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .image-preview {
+    margin-bottom: 0.75rem;
+  }
+  
+  .image-preview img {
+    max-width: 120px;
+    max-height: 80px;
+  }
+  
+  /* Language Switcher */
+  .language-trigger {
+    padding: 0.625rem 0.875rem;
+    font-size: 0.85rem;
+  }
+  
+  .language-trigger svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .language-dropdown {
+    min-width: 220px;
+    max-width: calc(100vw - 2rem);
+  }
+  
+  .language-option {
+    padding: 0.625rem 0.875rem;
+    font-size: 0.85rem;
+  }
+  
+  /* Dashboard */
+  .dataviz-page {
+    padding: 0.5rem;
+  }
+  
+  .dataviz-container {
+    gap: 1rem;
+  }
+  
+  .dataviz-header {
+    padding: 1rem;
+  }
+  
+  .header-title h1 {
+    font-size: 1.25rem;
+  }
+  
+  .filters-panel {
+    border-radius: 16px;
+  }
+  
+  .filters-content {
+    padding: 1rem;
+  }
+  
+  .filters-header h3 {
+    font-size: 1.1rem;
+  }
+  
+  .filters-grid {
+    gap: 0.875rem;
+  }
+  
+  .filter-select {
+    padding: 0.625rem 0.875rem;
+    font-size: 0.9rem;
+  }
+  
+  .filters-actions {
+    flex-direction: column;
+  }
+  
+  .filters-actions button {
+    width: 100%;
+  }
+  
+  .tabs-container {
+    border-radius: 16px;
+  }
+  
+  .tab-button {
+    padding: 0.875rem 1rem;
+    font-size: 0.85rem;
+  }
+  
+  .tab-button svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .content-area {
+    padding: 1rem;
+    min-height: 300px;
+  }
+  
+  .chart-card {
+    padding: 1rem;
+  }
+  
+  /* Home Page */
+  .hero-title {
+    font-size: 2rem !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.25rem !important;
+  }
+  
+  .hero-description {
+    font-size: 0.95rem !important;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .btn {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.95rem;
+    width: 100%;
+  }
+  
+  .ocean-depth-indicator {
+    width: 160px !important;
+    height: 220px !important;
+  }
+  
+  .depth-label {
+    font-size: 0.95rem;
+  }
+  
+  /* Mobile Navigation */
+  .nav-mobile {
+    width: 280px;
+  }
+  
+  .mobile-nav-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  .mobile-brand {
+    font-size: 1.25rem;
+  }
+  
+  .brand-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .close-btn {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .mobile-nav-item {
+    padding: 1rem 1.25rem;
+  }
+  
+  .mobile-underwater-toggle {
+    padding: 1rem;
+  }
+}
+
+/* Landscape Orientation on Mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .chat-container {
+    height: calc(100vh - 1rem);
+  }
+  
+  .messages-list {
+    padding: 0.75rem;
+  }
+  
+  .input-container {
+    padding: 0.75rem;
+  }
+  
+  .chat-input {
+    min-height: 38px;
+    max-height: 60px;
+  }
+  
+  .chat-map {
+    height: calc(100vh - 200px) !important;
+    min-height: 180px !important;
+  }
+}
+
+/* Touch-Friendly Buttons */
+@media (hover: none) and (pointer: coarse) {
+  button, 
+  .btn,
+  .input-btn,
+  .send-btn,
+  .nav-item,
+  .mobile-nav-item,
+  .language-option,
+  .example-query {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  .data-actions button {
+    min-height: 36px;
+    min-width: 36px;
+  }
+}
+
+/* Prevent Text Selection on Interactive Elements */
+.btn,
+.input-btn,
+.send-btn,
+.nav-item,
+.mobile-nav-item,
+.tab-button,
+.language-option,
+.example-query {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Smooth Scrolling on Mobile */
+.messages-list,
+.language-list {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+/* Fixed Safe Area for iOS Notch */
+@supports (padding: max(0px)) {
+  .chat-container {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+    padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+  }
+  
+  .mobile-menu-btn {
+    top: max(1.5rem, env(safe-area-inset-top) + 0.5rem);
+    left: max(1.5rem, env(safe-area-inset-left) + 0.5rem);
+  }
+  
+  .language-switcher {
+    top: max(2rem, env(safe-area-inset-top) + 0.5rem);
+    right: max(2rem, env(safe-area-inset-right) + 0.5rem);
+  }
+}
