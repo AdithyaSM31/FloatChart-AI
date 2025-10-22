@@ -1,0 +1,21 @@
+# Ignore backend and database files
+backend/
+mcp/
+*.py
+*.db
+*.sqlite3
+chroma_db/
+*.parquet
+
+# Ignore Python-related files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+
+# Keep only frontend
+!frontend/
