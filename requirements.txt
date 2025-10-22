@@ -8,3 +8,5 @@ langchain
 langchain-core
 langchain-groq
 python-dotenv
+tabulate
+pyarrow
