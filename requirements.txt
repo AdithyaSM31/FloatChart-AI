@@ -1,11 +1,12 @@
 fastapi
-uvicorn
+uvicorn[standard]
 sqlalchemy
 psycopg2-binary
 pandas
+groq
 langchain
 langchain-core
-langchain-google-genai
-google-generativeai
+langchain-groq
+chromadb
+sentence-transformers
 python-dotenv
-chroma-db
