@@ -1,4 +1,4 @@
-# FloatChart-AI 🌊# FloatChat Frontend
+# FloatChat-AI 🌊# FloatChat Frontend
 
 
 
